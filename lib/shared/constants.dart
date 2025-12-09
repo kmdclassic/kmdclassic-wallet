@@ -56,7 +56,7 @@ final RegExp matrixIdRegex = RegExp(
   r'^@[a-zA-Z0-9._=-]+:[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
 );
 final Uri pricesUrlV3 = Uri.parse(
-  'https://prices.komodian.info/api/v2/tickers?expire_at=60',
+  'https://prices.gleec.com/api/v2/tickers?expire_at=60',
 );
 
 const int millisecondsIn24H = 86400000;
@@ -90,10 +90,10 @@ const int? matomoPlatformDimensionId =
     int.fromEnvironment('MATOMO_PLATFORM_DIMENSION_ID', defaultValue: -1) == -1
     ? null
     : int.fromEnvironment('MATOMO_PLATFORM_DIMENSION_ID');
-const String moralisProxyUrl = 'https://moralis-proxy.komodo.earth';
-const String nftAntiSpamUrl = 'https://nft.antispam.dragonhound.info';
+const String moralisProxyUrl = 'https://moralis.gleec.com/';
+const String nftAntiSpamUrl = 'https://nft-antispam.gleec.com/';
 
 const String geoBlockerApiUrl =
     'https://komodo-wallet-bouncer.komodoplatform.com/v1/';
 const String tradingBlacklistUrl =
-    'https://defi-stats.komodo.earth/api/v3/utils/blacklist';
+    'https://defistats.gleec.com/api/v3/utils/blacklist';

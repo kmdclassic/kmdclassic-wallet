@@ -10,8 +10,8 @@ Gleec Wallet is a cross-platform application, meaning it can be built for multip
 
 ## Host Platform Setup
 
- 1. [Install Flutter, pin Flutter version](INSTALL_FLUTTER.md)
- 2. Install IDEs
+1.  [Install Flutter, pin Flutter version](INSTALL_FLUTTER.md)
+2.  Install IDEs
     - [VS Code](https://code.visualstudio.com/)
       - Install and enable `Dart` and `Flutter` extensions
       - Enable `Dart: Use recommended settings` via the Command Palette
@@ -27,35 +27,35 @@ Gleec Wallet is a cross-platform application, meaning it can be built for multip
       - `Desktop development with C++` workload required
       - [Nuget CLI](https://www.nuget.org/downloads) required for Windows desktop builds
       - [Enable long paths in Windows registry](BUILD_RUN_APP.md#windows-desktop)
- 3. (macOS only) CocoaPods and Ruby setup:
+3.  (macOS only) CocoaPods and Ruby setup:
     - Ruby: 3.0+ (recommended: 3.4.x). See [Ruby setup](BUILD_RUN_APP.md#ruby-setup).
     - CocoaPods: 1.15+ (assuming latest Xcode). See [CocoaPods installation](BUILD_RUN_APP.md#cocoapods-installation).
- 4. Run `flutter doctor` and make sure all checks (except version) pass
- 5. [Clone project repository](CLONE_REPOSITORY.md)
- 6. **Initialize SDK submodule**: After cloning, initialize the komodo-defi-sdk-flutter submodule:
+4.  Run `flutter doctor` and make sure all checks (except version) pass
+5.  [Clone project repository](CLONE_REPOSITORY.md)
+6.  **Initialize SDK submodule**: After cloning, initialize the komodo-defi-sdk-flutter submodule:
 
     ```bash
     cd gleec-wallet
     git submodule update --init --recursive
     ```
 
- 7. Build and run the App for each target platform:
+7.  Build and run the App for each target platform:
     - [Web](BUILD_RUN_APP.md#web)
     - [Android mobile](BUILD_RUN_APP.md#android)
     - [iOS mobile](BUILD_RUN_APP.md#ios) (macOS host only)
     - [macOS desktop](BUILD_RUN_APP.md#macos-desktop) (macOS host only)
     - [Windows desktop](BUILD_RUN_APP.md#windows-desktop) (Windows host only)
     - [Linux desktop](BUILD_RUN_APP.md#linux-desktop) (Linux host only)
- 8. [Build release version](BUILD_RELEASE.md)
+8.  [Build release version](BUILD_RELEASE.md)
 
 ## Dev Container setup (Web and Android builds only)
 
 1. Install [Docker](https://www.docker.com/get-started) for your operating system.
-      - Linux: Install [Docker for your distribution](https://docs.docker.com/install/#supported-platforms) and add your user to the group by using terminal to run: `sudo usermod -aG docker $USER`.
-      - Windows/macOS: Install [Docker Desktop for Windows/macOS](https://www.docker.com/products/docker-desktop), and if you are using WSL in Windows, please ensure that the [WSL 2 back-end](https://aka.ms/vscode-remote/containers/docker-wsl2) is installed and configured.
+   - Linux: Install [Docker for your distribution](https://docs.docker.com/install/#supported-platforms) and add your user to the group by using terminal to run: `sudo usermod -aG docker $USER`.
+   - Windows/macOS: Install [Docker Desktop for Windows/macOS](https://www.docker.com/products/docker-desktop), and if you are using WSL in Windows, please ensure that the [WSL 2 back-end](https://aka.ms/vscode-remote/containers/docker-wsl2) is installed and configured.
 2. Install [VS Code](https://code.visualstudio.com/)
-      - Install and enable `Dart` and `Flutter` extensions
-      - Enable `Dart: Use recommended settings` via the Command Palette
+   - Install and enable `Dart` and `Flutter` extensions
+   - Enable `Dart: Use recommended settings` via the Command Palette
 3. Install the VSCode [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 4. Open the command palette (Ctrl+Shift+P) and run `Remote-Containers: Reopen in Container`
 

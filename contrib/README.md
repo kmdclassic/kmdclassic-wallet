@@ -5,11 +5,13 @@ This directory contains utility scripts for building, packaging, and testing the
 ## Scripts Overview
 
 ### `make-dmg.sh`
+
 Creates a professional DMG installer for macOS applications.
 
 **Purpose:** Builds a disk image (.dmg) file with proper layout for distributing macOS applications.
 
 **Features:**
+
 - Creates a disk image with the application bundle
 - Adds a shortcut to the Applications folder
 - Supports custom background images
@@ -17,6 +19,7 @@ Creates a professional DMG installer for macOS applications.
 - Compresses the final output
 
 **Usage:**
+
 ```bash
 # Use default app path
 ./make-dmg.sh
@@ -30,6 +33,7 @@ BG="assets/dmg_background.png" \
 ```
 
 **Default Parameters:**
+
 - `APP`: `build/macos/Build/Products/Release-production/Gleec DEX.app`
 - `VOL`: `Gleec DEX`
 - `OUT`: `dist/GleecDEX.dmg`
@@ -43,11 +47,13 @@ BG="assets/dmg_background.png" \
 ---
 
 ### `test-sign-timestamp.sh`
+
 Checks code signing and timestamping for macOS applications.
 
 **Purpose:** Verifies that all executable Mach-O files in the app bundle are properly signed and timestamped.
 
 **Features:**
+
 - Scans all executable files in the app bundle
 - Checks for valid code signatures
 - Verifies timestamping (Apple's timestamp authority)
@@ -55,6 +61,7 @@ Checks code signing and timestamping for macOS applications.
 - Reports missing timestamps
 
 **Usage:**
+
 ```bash
 # Use default app path
 ./test-sign-timestamp.sh
@@ -66,7 +73,6 @@ Checks code signing and timestamping for macOS applications.
 **Default App Path:** `build/macos/Build/Products/Release-production/Gleec DEX.app`
 
 **Requirements:** macOS, codesign utility
-
 
 ## Release Build and Notarization Process for macOS (Non-App Store Distribution)
 
@@ -93,14 +99,17 @@ flutter build macos --no-pub --release -v \
   --dart-define=MATOMO_SITE_ID=<id> \
   --flavor production
 ```
+
 Replace the `<...>` placeholders above with your actual values.
 
 To view app entitlements used in the resulting .app:
+
 ```bash
 codesign -d --entitlements :- "build/macos/Build/Products/Release-production/Gleec DEX.app" | plutil -p -
 ```
 
 Package the application bundle as a ZIP archive (required by notary service):
+
 ```bash
 APP="build/macos/Build/Products/Release-production/Gleec DEX.app"
 ZIP="GleecDEX.zip"
@@ -108,11 +117,13 @@ ditto -c -k --keepParent "$APP" "$ZIP"
 ```
 
 Submit the ZIP archive to Apple Notary Service:
+
 ```bash
 xcrun notarytool submit "$ZIP" --keychain-profile "AC_NOTARY" --wait
 ```
 
 Check notarization status for a specific request:
+
 ```bash
 xcrun notarytool info <REQUEST_ID> \
   --apple-id "<apple_id_email>" \
@@ -121,6 +132,7 @@ xcrun notarytool info <REQUEST_ID> \
 ```
 
 Download notarization log:
+
 ```bash
 xcrun notarytool log <REQUEST_ID> --keychain-profile AC_NOTARY > notarization_errors.json
 ```
@@ -132,16 +144,3 @@ xcrun stapler staple "$APP"
 xcrun stapler validate "$APP"
 spctl --assess --type execute -vv "$APP"   # now the status should be accepted
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
