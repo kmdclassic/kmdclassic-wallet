@@ -790,6 +790,7 @@
   "fetchingPrivateKeysTitle": "Fetching Private Keys...",
   "fetchingPrivateKeysMessage": "Please wait while we securely fetch your private keys...",
   "pubkeyType": "Type",
+  "pubkey": "Pubkey",
   "securitySettings": "Security Settings",
   "zhtlcConfigureTitle": "Configure {} chain sync",
   "zhtlcZcashParamsPathLabel": "Zcash parameters path",

@@ -827,6 +827,7 @@ abstract class LocaleKeys {
   static const fetchingPrivateKeysTitle = 'fetchingPrivateKeysTitle';
   static const fetchingPrivateKeysMessage = 'fetchingPrivateKeysMessage';
   static const pubkeyType = 'pubkeyType';
+  static const pubkey = 'pubkey';
   static const securitySettings = 'securitySettings';
   static const zhtlcConfigureTitle = 'zhtlcConfigureTitle';
   static const zhtlcZcashParamsPathLabel = 'zhtlcZcashParamsPathLabel';
