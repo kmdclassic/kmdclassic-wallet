@@ -13,6 +13,7 @@ ThemeData get themeGlobalLight {
 
   final ColorScheme colorScheme = const ColorScheme.light().copyWith(
     primary: const Color(0xFF8C41FF), // GLEEC Purple primary
+    inversePrimary: const Color(0xFFB87DFF), // Lighter purple for gradients
     secondary: const Color(0xFF666666), // Muted gray for accents
     tertiary: const Color.fromARGB(255, 192, 225, 255),
     surface: const Color.fromRGBO(255, 255, 255, 1),
