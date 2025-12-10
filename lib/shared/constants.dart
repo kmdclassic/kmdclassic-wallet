@@ -21,30 +21,14 @@ const String storedMarketMakerSettingsKey = 'market_maker_settings';
 const String lastLoggedInWalletKey = 'last_logged_in_wallet';
 
 // anchor: protocols support
-const String ercTxHistoryUrl = 'https://etherscan-proxy.komodo.earth/api';
-const String ethUrl = '$ercTxHistoryUrl/v1/eth_tx_history';
-const String ercUrl = '$ercTxHistoryUrl/v2/erc_tx_history';
-const String bnbUrl = '$ercTxHistoryUrl/v1/bnb_tx_history';
-const String bepUrl = '$ercTxHistoryUrl/v2/bep_tx_history';
-const String ftmUrl = '$ercTxHistoryUrl/v1/ftm_tx_history';
-const String ftmTokenUrl = '$ercTxHistoryUrl/v2/ftm_tx_history';
-const String arbUrl = '$ercTxHistoryUrl/v1/arbitrum_tx_history';
-const String arbTokenUrl = '$ercTxHistoryUrl/v2/arbitrum_tx_history';
-const String etcUrl = '$ercTxHistoryUrl/v1/etc_tx_history';
-const String avaxUrl = '$ercTxHistoryUrl/v1/avx_tx_history';
-const String avaxTokenUrl = '$ercTxHistoryUrl/v2/avx_tx_history';
-const String mvrUrl = '$ercTxHistoryUrl/v1/moonriver_tx_history';
-const String mvrTokenUrl = '$ercTxHistoryUrl/v2/moonriver_tx_history';
-const String hecoUrl = '$ercTxHistoryUrl/v1/heco_tx_history';
-const String hecoTokenUrl = '$ercTxHistoryUrl/v2/heco_tx_history';
-const String maticUrl = '$ercTxHistoryUrl/v1/plg_tx_history';
-const String maticTokenUrl = '$ercTxHistoryUrl/v2/plg_tx_history';
-const String kcsUrl = '$ercTxHistoryUrl/v1/kcs_tx_history';
-const String kcsTokenUrl = '$ercTxHistoryUrl/v2/kcs_tx_history';
-const String txByHashUrl = '$ercTxHistoryUrl/v1/transactions_by_hash';
+const String txByHashUrl =
+    'https://etherscan.gleec.com/api/v2/transactions_by_hash';
 
-const String updateCheckerEndpoint = 'https://komodo.earth/adexwebversion';
-final Uri feedbackUrl = Uri.parse('https://komodo.earth:8181/webform/');
+final String updateCheckerEndpoint = throw UnimplementedError(
+  'URL has not been migrated yet. '
+  'Either remove this feature (unused) or migrate it to Gleec infra.',
+);
+
 const int feedbackMaxLength = 1000;
 const int contactDetailsMaxLength = 100;
 // Maximum allowed length for passwords across the app
@@ -93,7 +77,6 @@ const int? matomoPlatformDimensionId =
 const String moralisProxyUrl = 'https://moralis.gleec.com/';
 const String nftAntiSpamUrl = 'https://nft-antispam.gleec.com/';
 
-const String geoBlockerApiUrl =
-    'https://komodo-wallet-bouncer.komodoplatform.com/v1/';
+const String geoBlockerApiUrl = 'https://gleec-wallet-bouncer.gleec.com/v1/';
 const String tradingBlacklistUrl =
     'https://defistats.gleec.com/api/v3/utils/blacklist';
