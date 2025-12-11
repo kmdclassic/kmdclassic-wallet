@@ -24,7 +24,7 @@ const String lastLoggedInWalletKey = 'last_logged_in_wallet';
 const String ercTxHistoryUrl = 'https://etherscan.gleec.com/api';
 const String txByHashUrl = '$ercTxHistoryUrl/v1/transactions_by_hash';
 
-const String updateCheckerEndpoint = 'https://komodo.earth/adexwebversion';
+const String updateCheckerEndpoint = 'https://defistats.gleec.com/api/v3/dex_version';
 const int feedbackMaxLength = 1000;
 const int contactDetailsMaxLength = 100;
 // Maximum allowed length for passwords across the app
