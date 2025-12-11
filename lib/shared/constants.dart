@@ -71,6 +71,6 @@ const String moralisProxyUrl = 'https://moralis.gleec.com';
 const String nftAntiSpamUrl = 'https://nft-antispam.gleec.com';
 
 const String geoBlockerApiUrl =
-    'https://komodo-wallet-bouncer.komodoplatform.com/v1/';
+    'https://gleec-wallet-bouncer.gleec.com/v1/';
 const String tradingBlacklistUrl =
     'https://defistats.gleec.com/api/v3/utils/blacklist';
