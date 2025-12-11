@@ -370,20 +370,24 @@ class _MyAppViewState extends State<_MyAppView> {
   // web and native to avoid web-code in code concerning all platforms.
   Future<void> _hideAppLoader() async {
     if (kIsWeb) {
-      html.document.getElementById('main-content')?.style.display = 'block';
+      // Duration must match the CSS transition/animation in index.html
+      const animationDurationMs = 330;
 
       final loadingElement = html.document.getElementById('loading');
+      final mainContent = html.document.getElementById('main-content');
 
-      if (loadingElement == null) return;
+      // Fade in main content and fade out loader simultaneously for smooth
+      // crossfade (avoids brief blank screen between loader and app).
+      mainContent?.style.opacity = '1';
+      loadingElement?.classes.add('init_done');
 
-      // Trigger the zoom out animation.
-      loadingElement.classes.add('init_done');
-
-      // Await 200ms so the user can see the animation.
-      await Future<void>.delayed(const Duration(milliseconds: 200));
+      // Wait for both animations to complete before removing the loader.
+      await Future<void>.delayed(
+        const Duration(milliseconds: animationDurationMs),
+      );
 
       // Remove the loading indicator.
-      loadingElement.remove();
+      loadingElement?.remove();
 
       final delay = DateTime.now()
           .difference(_pageLoadStartTime)
@@ -392,7 +396,7 @@ class _MyAppViewState extends State<_MyAppView> {
         PageInteractiveDelayEventData(
           pageName: 'app_root',
           interactiveDelayMs: delay,
-          spinnerTimeMs: 200,
+          spinnerTimeMs: animationDurationMs,
         ),
       );
     }
