@@ -23,9 +23,9 @@ const String lastLoggedInWalletKey = 'last_logged_in_wallet';
 // anchor: protocols support
 const String ercTxHistoryUrl = 'https://etherscan.gleec.com/api';
 
-const String updateCheckerEndpoint = 'https://defistats.gleec.com/api/v3/dex_version';
-const String txByHashUrl =
-    '$ercTxHistoryUrl/v2/transactions_by_hash';
+const String updateCheckerEndpoint =
+    'https://defistats.gleec.com/api/v3/dex_version';
+const String txByHashUrl = '$ercTxHistoryUrl/v2/transactions_by_hash';
 
 const int feedbackMaxLength = 1000;
 const int contactDetailsMaxLength = 100;
@@ -67,14 +67,14 @@ const String matomoSiteId = String.fromEnvironment(
 );
 
 /// Optional: Custom dimension id in Matomo used to store platform name
-/// Provide via --dart-define=MATOMO_PLATFORM_DIMENSION_ID=<number>
+/// Provide via --dart-define=MATOMO_PLATFORM_DIMENSION_ID=123
 const int? matomoPlatformDimensionId =
     int.fromEnvironment('MATOMO_PLATFORM_DIMENSION_ID', defaultValue: -1) == -1
     ? null
     : int.fromEnvironment('MATOMO_PLATFORM_DIMENSION_ID');
-const String moralisProxyUrl = 'https://moralis.gleec.com/';
-const String nftAntiSpamUrl = 'https://nft-antispam.gleec.com/';
+const String moralisProxyUrl = 'https://moralis.gleec.com';
+const String nftAntiSpamUrl = 'https://nft-antispam.gleec.com';
 
-const String geoBlockerApiUrl = 'https://gleec-wallet-bouncer.gleec.com/v1/';
+const String geoBlockerApiUrl = 'https://gleec-wallet-bouncer.gleec.com/v1';
 const String tradingBlacklistUrl =
     'https://defistats.gleec.com/api/v3/utils/blacklist';
