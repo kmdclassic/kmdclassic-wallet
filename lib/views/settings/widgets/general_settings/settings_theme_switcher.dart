@@ -79,9 +79,7 @@ class _SettingsModeSelector extends StatelessWidget {
               right: 8,
               top: 0,
               bottom: 0,
-              child: Center(
-                child: GleecDexLogo(height: 20, forceThemeMode: mode),
-              ),
+              child: Center(child: GleecDexLogo(height: 20, themeMode: mode)),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
