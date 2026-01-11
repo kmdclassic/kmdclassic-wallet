@@ -110,6 +110,7 @@ Map<String, int> priorityCoinsAbbrMap = {
 const List<String> unauthenticatedUserPriorityTickers = [
   'BTC',
   'KMD',
+  'KMDCL',
   'ETH',
   'BNB',
   'LTC',
