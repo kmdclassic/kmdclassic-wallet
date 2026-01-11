@@ -42,7 +42,9 @@ class _MainLayoutState extends State<MainLayout> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await AlphaVersionWarningService().run();
-      await updateBloc.init();
+      if (kEnableUpdateCheck) {
+        await updateBloc.init();
+      }
 
       if (mounted) {
         try {

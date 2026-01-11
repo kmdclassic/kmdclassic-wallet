@@ -56,8 +56,8 @@ class UpdateBloc extends BlocBase {
   bool _isVersionGreaterThan(String newVersion, String currentVersion) {
     if (newVersion == currentVersion) return false;
 
-    final int currentV = int.parse(currentVersion.replaceAll('.', ''));
-    final int newV = int.parse(newVersion.replaceAll('.', ''));
+    final int currentV = int.parse(currentVersion.replaceAll(RegExp(r'[^0-9]'), ''));
+    final int newV = int.parse(newVersion.replaceAll(RegExp(r'[^0-9]'), ''));
 
     return newV > currentV;
   }

@@ -34,6 +34,10 @@ const bool isBitrefillIntegrationEnabled = false;
 ///! trading purposes where it is not legally compliant.
 const bool kShowTradingWarning = false;
 
+/// Const to define whether to enable automatic update checking.
+/// When set to false, the app will not check for updates on startup or periodically.
+const bool kEnableUpdateCheck = false;
+
 const Duration kPerformanceLogInterval = Duration(minutes: 1);
 
 /// Enable debug logging for electrum connections and RPC methods.
