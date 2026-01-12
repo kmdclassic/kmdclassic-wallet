@@ -56,8 +56,8 @@ const double kSimulatedBestOrdersFailureRate = 0.5; // 50%
 // This information is here because it is not contextual and is branded.
 // Names of their own are not localized. Also, the application is initialized before
 // the localization package is initialized.
-String get appTitle => 'Komodo Wallet | Non-Custodial Multi-Coin Wallet & DEX';
-String get appShortTitle => 'Komodo Wallet';
+String get appTitle => 'Komodo Classic Wallet | Non-Custodial Multi-Coin Wallet & DEX';
+String get appShortTitle => 'Komodo Classic Wallet';
 
 Map<String, int> priorityCoinsAbbrMap = {
   // KMD always has highest priority (special case for Komodo ecosystem)

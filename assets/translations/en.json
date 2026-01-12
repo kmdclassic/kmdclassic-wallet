@@ -246,7 +246,7 @@
   "supportFrequentlyQuestionSpan": "Frequently asked questions",
   "support": "Support",
   "supportInfoTitle1": "Do you store my private keys?",
-  "supportInfoContent1": "No! Komodo Wallet is non-custodial. We never store any sensitive data, private keys, seed phrases, or your PIN. This data is only stored locally, and is encrypted with your wallet password. It never leaves your device unless you export it. You are in full control of your assets.",
+  "supportInfoContent1": "No! Komodo Classic Wallet is non-custodial. We never store any sensitive data, private keys, seed phrases, or your PIN. This data is only stored locally, and is encrypted with your wallet password. It never leaves your device unless you export it. You are in full control of your assets.",
   "supportInfoTitle2": "How is trading with Komodo Wallet different from trading on other DEXs?",
   "supportInfoContent2": "Most DEXs only allow you to trade assets that are based on a single blockchain network, use proxy tokens, and only allow placing a single order with the same funds. Komodo Wallet enables you to trade across different blockchain networks without proxy tokens, and use the same funds to place multiple orders for different pairs. For example, you can sell 0.1 BTC for KMD, QTUM, or VRSC — the first order that fills automatically cancels all other orders.",
   "supportInfoTitle3": "How long does each atomic swap take?",

@@ -1,6 +1,6 @@
 {
-    "name": "Komodo Web Wallet",
-    "short_name": "KomodoWebWallet",
+    "name": "Komodo Classic Web Wallet",
+    "short_name": "KomodoClassicWebWallet",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
