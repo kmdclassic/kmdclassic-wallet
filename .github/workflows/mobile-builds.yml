@@ -10,6 +10,7 @@ on:
 
 jobs:
   build_mobile:
+    if: false
     name: Build Mobile (${{ matrix.platform }})
     runs-on: ${{ matrix.runner }}
     continue-on-error: true

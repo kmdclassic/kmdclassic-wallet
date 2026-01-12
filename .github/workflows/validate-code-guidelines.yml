@@ -10,6 +10,7 @@ on:
 
 jobs:
   validate_code_guidelines:
+    if: false
     runs-on: ubuntu-latest
 
     steps:

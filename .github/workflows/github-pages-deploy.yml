@@ -1,0 +1,65 @@
+# Deploys a web build to GitHub Pages when manually triggered via workflow_dispatch
+name: Deploy to GitHub Pages
+run-name: ${{ github.actor }} is deploying web build to GitHub Pages 🚀
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Shortify commit sha
+        shell: bash
+        run: echo "sha_short=$(echo ${GITHUB_SHA::7})" >> $GITHUB_OUTPUT
+        id: shortify_commit
+
+      - name: Get branch
+        shell: bash
+        run: echo "ref_short=$(echo ${GITHUB_REF##*/})" >> $GITHUB_OUTPUT
+        id: get_branch
+
+      - name: Setup GH Actions
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Flutter and dependencies
+        uses: ./.github/actions/flutter-deps
+
+      - name: Fetch packages and generate assets
+        uses: ./.github/actions/generate-assets
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_COMMAND: flutter build web --no-pub --release --dart-define=GEO_BLOCK=disabled
+          ANALYTICS_DISABLED: true
+
+      - name: Validate build
+        uses: ./.github/actions/validate-build
+
+      - name: Create CNAME file for custom domain
+        shell: bash
+        run: echo "dex.kmdclassic.com" > build/web/CNAME
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+

@@ -29,6 +29,7 @@ on:
 
 jobs:
   roll-sdk-packages:
+    if: false
     runs-on: ubuntu-latest
     permissions:
       contents: write

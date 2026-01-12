@@ -18,6 +18,7 @@ on:
 
 jobs:
   build_and_preview:
+    if: false
     runs-on: ubuntu-latest
     outputs:
       preview_url: ${{ steps.firebase_deploy.outputs.details_url }}

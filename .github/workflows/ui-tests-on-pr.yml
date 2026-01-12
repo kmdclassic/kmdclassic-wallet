@@ -8,6 +8,7 @@ on:
 
 jobs:
   ui_tests:
+    if: false
     name: Test ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 45

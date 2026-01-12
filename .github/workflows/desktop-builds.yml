@@ -10,6 +10,7 @@ on:
 
 jobs:
   build_desktop:
+    if: false
     name: Build Desktop (${{ matrix.platform }})
     runs-on: ${{ matrix.runner }}
     continue-on-error: true
