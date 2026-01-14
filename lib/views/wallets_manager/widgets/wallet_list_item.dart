@@ -52,7 +52,10 @@ class WalletListItem extends StatelessWidget {
           IconButton(
             onPressed: () =>
                 onClick(wallet, WalletsManagerExistWalletAction.delete),
-            icon: const Icon(Icons.close),
+            icon: const Icon(
+              Icons.close,
+              color: Color(0xFF456078),
+            ),
           ),
         ],
       ),
