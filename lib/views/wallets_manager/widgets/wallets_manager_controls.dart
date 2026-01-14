@@ -34,7 +34,7 @@ class WalletsManagerControls extends StatelessWidget {
         children: [
           Icon(
             Icons.add,
-            color: Theme.of(context).textTheme.labelLarge?.color,
+            color: Colors.white,
             size: 15,
           ),
           Padding(
@@ -44,6 +44,7 @@ class WalletsManagerControls extends StatelessWidget {
               style: Theme.of(context).textTheme.labelLarge?.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
+                    color: Colors.white,
                   ),
             ),
           ),
@@ -62,7 +63,7 @@ class WalletsManagerControls extends StatelessWidget {
           children: [
             Icon(
               Icons.download,
-              color: Theme.of(context).textTheme.labelLarge?.color,
+              color: Theme.of(context).textTheme.bodyMedium?.color,
               size: 15,
             ),
             Padding(
@@ -72,6 +73,7 @@ class WalletsManagerControls extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelLarge?.copyWith(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
+                      color: Theme.of(context).textTheme.bodyMedium?.color,
                     ),
               ),
             ),
