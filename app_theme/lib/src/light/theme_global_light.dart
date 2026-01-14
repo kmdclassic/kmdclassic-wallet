@@ -12,7 +12,7 @@ ThemeData get themeGlobalLight {
       );
 
   final ColorScheme colorScheme = const ColorScheme.light().copyWith(
-    primary: const Color(0xFF0D9488),
+    primary: const Color(0xFF456078),
     secondary: const Color(0xFF00C3AA),
     tertiary: const Color.fromARGB(255, 192, 225, 255),
     surface: const Color.fromRGBO(255, 255, 255, 1),
@@ -99,9 +99,9 @@ ThemeData get themeGlobalLight {
     hintColor: const Color.fromRGBO(183, 187, 191, 1),
     snackBarTheme: snackBarThemeLight(),
     textSelectionTheme: TextSelectionThemeData(
-      cursorColor: const Color(0xFF0D9488),
-      selectionColor: const Color(0xFF0D9488).withAlpha(77), // 0.3 * 255
-      selectionHandleColor: const Color(0xFF0D9488),
+      cursorColor: const Color(0xFF456078),
+      selectionColor: const Color(0xFF456078).withAlpha(77), // 0.3 * 255
+      selectionHandleColor: const Color(0xFF456078),
     ),
     inputDecorationTheme: InputDecorationTheme(
       enabledBorder: outlineBorderLight(Colors.transparent),
@@ -151,7 +151,7 @@ ThemeData get themeGlobalLight {
       // remove icons shift
       type: BottomNavigationBarType.fixed,
       backgroundColor: colorScheme.surface,
-      selectedItemColor: const Color(0xFF0D9488),
+      selectedItemColor: const Color(0xFF456078),
       unselectedItemColor: textColor,
       unselectedLabelStyle: const TextStyle(
         fontSize: 12,
