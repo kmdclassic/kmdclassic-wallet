@@ -2,7 +2,7 @@ import 'package:app_theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 const ColorSchemeExtension _colorSchemeExtension = ColorSchemeExtension(
-  primary: Color(0xFF00D4FF), // Teal primary
+  primary: Color(0xFF0D9488), // Dark Teal primary
   p50: Color(0xFF80EAD7), // Light teal
   p40: Color(0xFFB3F0E0), // Lighter teal
   p10: Color(0xFFE6F9F5), // Very light teal
