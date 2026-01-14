@@ -19,7 +19,7 @@ class WalletListItem extends StatelessWidget {
         child: Icon(
           Icons.person,
           size: 21,
-          color: Theme.of(context).textTheme.labelLarge?.color,
+          color: Theme.of(context).textTheme.bodyMedium?.color,
         ),
       ),
       height: 40,
@@ -35,23 +35,27 @@ class WalletListItem extends StatelessWidget {
             child: Icon(
               Icons.person,
               size: 21,
-              color: Theme.of(context).textTheme.labelLarge?.color,
+              color: Theme.of(context).textTheme.bodyMedium?.color,
             ),
           ),
           const SizedBox(width: 8),
           Expanded(
             child: Text(
               wallet.name,
-              // style: DefaultTextStyle.of(context).style.copyWith(
-              //       fontWeight: FontWeight.w500,
-              //       fontSize: 14,
-              //     ),
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    color: Theme.of(context).textTheme.bodyMedium?.color,
+                  ),
             ),
           ),
           IconButton(
             onPressed: () =>
                 onClick(wallet, WalletsManagerExistWalletAction.delete),
-            icon: const Icon(Icons.close),
+            icon: const Icon(
+              Icons.close,
+              color: Color(0xFF456078),
+            ),
           ),
         ],
       ),

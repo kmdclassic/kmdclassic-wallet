@@ -50,9 +50,12 @@ class WalletTypeListItem extends StatelessWidget {
                   children: [
                     Text(
                       LocaleKeys.connectSomething.tr(args: [_walletTypeName]),
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
+                        color: needAttractAttention
+                            ? Colors.white
+                            : Theme.of(context).textTheme.bodyMedium?.color,
                       ),
                     ),
                   ],
